@@ -339,7 +339,10 @@ public class SurgicalRobot implements Contract{
             String walkType = OlohIntel.userInput.nextLine().toLowerCase(); //Unique variable to store user's response in prep for invoking the walk() method
             OlohIntel.rest(1000);
             while (!(walkType.equals("cardinal") | walkType.equals("coordinate"))){
-                System.out.println("Cardinal or Coordinate? Reenter!");} //Allows user to select which of the overloaded methods to use
+                System.out.println("Cardinal or Coordinate? Reenter!");//Allows user to select which of the overloaded methods to use
+                walkType = OlohIntel.userInput.nextLine().toLowerCase();
+
+            } 
                 if (walkType.equals("cardinal")){  
                     //Runs if user prefers cardinal directions
                     System.out.println("Enter direction: right/left/forward/backward");
